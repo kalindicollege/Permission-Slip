@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permission Form - Global Young Journalists Awards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #007BFF;
+        }
+        .section h2 {
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        .section p, .section ul {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333333;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .contact-info {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-left: 5px solid #007BFF;
+            border-radius: 6px;
+        }
+        #confirmationMessage {
+            display: none;
+            text-align: center;
+            font-size: 18px;
+            color: #007BFF;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Global Young Journalists Awards Trip - Permission Form</h1>
+        
+        <div class="section">
+            <h2>Announcement</h2>
+            <p><strong>From:</strong> Department Of Journalism, Kalindi College</p>
+            <p><strong>Subject:</strong> Global Young Journalists Awards Trip to Asian College of Journalism, Chennai</p>
+            <p>We are excited to announce that a group of 15 students from Kalindi College, Delhi has been selected to attend the prestigious Global Young Journalists Awards at the Asian College of Journalism, Chennai. This is a valuable opportunity for our students to:</p>
+            <ul>
+                <li>Interact with renowned journalists and industry experts</li>
+                <li>Network with various media agencies for future employment prospects</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Trip Details</h2>
+            <p><strong>Destination:</strong> Asian College of Journalism, Chennai</p>
+            <p><strong>Dates:</strong> 15th September to 21st September</p>
+            <p><strong>Cost:</strong> ₹20,000 per student (covering to and fro journey and stay)</p>
+        </div>
+        
+        <div class="section">
+            <h2>Selected Students</h2>
+            <ul>
+                <li>Shreya Sharma</li>
+                <li>Priya Gupta</li>
+                <li>Aisha Khan</li>
+                <li>Neha Patel</li>
+                <li>Meera Singh</li>
+                <li>Anita Verma</li>
+                <li>Ritika Desai</li>
+                <li>Kavita Yadav</li>
+                <li>Sonia Saini</li>
+                <li>Rani Rani</li>
+                <li>Simran Khanna</li>
+                <li>Tanvi Agarwal</li>
+                <li>Sonam Rawat</li>
+                <li>Swati Sharma</li>
+                <li>Sanchayita Bhattacharjee</li>
+            </ul>
+        </div>
+        
+        <div class="section contact-info">
+            <p><strong>For further information and registration:</strong></p>
+            <p>Please contact Manisha Tomar, TIC, Department of Journalism.</p>
+            <p><strong>Deadline for registration:</strong> August 20th, 2024</p>
+        </div>
+
+        <form id="permissionForm" onsubmit="return showConfirmation();">
+            <div class="form-group">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="guardianName">Guardian Name:</label>
+                <input type="text" id="guardianName" name="guardianName" required>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="text" id="contactNumber" name="contactNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="permission">Guardian's Permission:</label>
+                <textarea id="permission" name="permission" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <div id="confirmationMessage">Your response has been recorded.</div>
+    </div>
+
+    <script>
+        function showConfirmation() {
+            // Prevent form submission to server
+            event.preventDefault();
+            
+            // Display confirmation message
+            document.getElementById('confirmationMessage').style.display = 'block';
+            
+            // Clear form fields
+            document.getElementById('permissionForm').reset();
+            
+            // Return false to prevent form from submitting
+            return false;
+        }
+    </script>
+</body>
+</html>
+
